@@ -5,7 +5,7 @@
  */
 package PROG_Boletin_6_2;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,20 +15,28 @@ public class PROG_Boletin_6_2 {
 
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
+        JOptionPane.showMessageDialog(null, "Implementa un programa no que se tecleen dous números de tipo short.\n Se o primeiro é maior ou igual que o segundo, \n visualizaremos a resta . En calquera caso visualizaremos a suma .", "Boletin_6_2", 1);
 
-        System.out.println("Introduce el primer numero :");
-        short num1 = scan.nextShort();
-
-        System.out.println("Introduce el segundo numero :");
-        short num2 = scan.nextShort();
+        short num1 = introduceShort("primer");
+        short num2 = introduceShort("segundo");
 
         if (num1 >= num2) {
-            System.out.println("Resta num 1 - num2 : " + (num1 - num2));
+            JOptionPane.showMessageDialog(null, "Resta: " + (num1 - num2), "Boletin_6_2", 1);
         }
+        JOptionPane.showMessageDialog(null, "Suma: " + (num1 + num2), "Boletin_6_2", 1);
+    }
 
-        System.out.println("Suma num 1 + num2 : " + (num1 + num2));
-
+    public static short introduceShort(String str) {
+        int numInt;
+        do {
+            try {
+                numInt = Integer.parseInt(JOptionPane.showInputDialog(null, "Introduce el " + str + " numero.\n Rango: -32768 , 32767", "Boletin_6_2", 1));
+            } catch (NumberFormatException e) {
+                numInt = 33333;
+            }
+        } while (numInt > 32767 || numInt < -32768);
+        short numShort = (short) numInt;
+        return numShort;
     }
 
 }
