@@ -20,18 +20,21 @@ public class PROG_Boletin_6_7 {
         JOptionPane.showMessageDialog(null, "Calculadora de Areas Geometricas", "Boletin_6_7", 1);
         // int seleccion = JOptionPane.showOptionDialog( null, "Seleccione opcion", "Selector de opciones", JOptionPane.QUESTION_MESSAGE, null, opciones, 1);
         int seleccion = JOptionPane.showOptionDialog(null, "Selecciona una figura geometrica", "Boletin_6_7", 0, 0, null, opciones, 1);
-        
-        switch(seleccion) {
-            case 0: Circulo circulo = new Circulo();
-                    circulo.mostrarArea();
-                    break;
-            case 1: Rectangulo rectangulo = new Rectangulo();
-                    rectangulo.mostrarArea();
-                    break;
-            case 2: Triangulo triangulo = new Triangulo();
-                    triangulo.mostrarArea();
-                    break;
-                    
+
+        switch (seleccion) {
+            case 0:
+                Circulo circulo = new Circulo();
+                circulo.mostrarArea();
+                break;
+            case 1:
+                Rectangulo rectangulo = new Rectangulo();
+                rectangulo.mostrarArea();
+                break;
+            case 2:
+                Triangulo triangulo = new Triangulo();
+                triangulo.mostrarArea();
+                break;
+
         }
 
     }
