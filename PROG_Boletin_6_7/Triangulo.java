@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author NarF
+ * @author fsancheztemprano
  */
 public class Triangulo {
     float base;
