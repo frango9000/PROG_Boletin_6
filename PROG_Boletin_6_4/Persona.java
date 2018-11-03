@@ -44,8 +44,20 @@ public class Persona {
     
     }
     
-    public static float compararPeso(Persona a, Persona b){
-        return a.peso - b.peso;                          
+    public float compararPeso(Persona a){
+        return this.peso - a.peso;                          
+    }
+    public Persona masGordo(Persona a){
+        if (this.peso > a.peso)
+            return this;
+        else
+            return a;
+    }
+    public Persona masFlaco(Persona a){
+        if (this.peso < a.peso)
+            return this;
+        else
+            return a;
     }
     public void visualizarPersona(){
         System.out.println("Nombre: " + nombre + " Peso: " + peso + "\n");
