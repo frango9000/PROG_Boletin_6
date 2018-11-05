@@ -35,11 +35,11 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public int getPeso() {
+    public int getVentasAnuales() {
         return ventasAnuales;
     }
 
-    public void setPeso(int ventasAnuales) {
+    public void setVentasAnuales(int ventasAnuales) {
         
         this.ventasAnuales = ventasAnuales;
     
